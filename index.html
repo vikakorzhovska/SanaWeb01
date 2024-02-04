@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Анкета відвідувача</legend>
+<fieldset>
+    <legend>Особисті дані</legend>
+    <table>
+        <tr>
+            <td><label for="idUser">ID відгуку:</label></td>
+            <td><label for="email">Email користувача:</label></td>
+        </tr>
+        <tr>
+            <td>
+    <input type="text" name="idUser" id="idUser" placeholder="ID" pattern="^\d{8}$" title="Лише 8 цифр" required/>
+            </td>
+            <td>
+                <input type="email" name="email" id="email" autocomplete="off" placeholder="your_name@gmail.com" required/>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<fieldset>
+    <legend>Відгук про поїздку:</legend>
+    <table>
+<tr>
+    <td><label for="country">Країна:</label></td>
+    <td><label for="cities">Місто:</label></td>
+</tr>
+        <tr>
+            <td>
+                <input type="text" list="country-list" name="country-list" id="country" placeholder="Назва країни" required/>
+                <datalist id="country-list">
+                    <option value="Україна"></option>
+                    <option value="Франція"></option>
+                    <option value="Німеччина"></option>
+                    <option value="Польща"></option>
+                    <option value="Туреччина"></option>
+                    <option value="США"></option>
+                    <option value="Норвегія"></option>
+                </datalist>
+            </td>
+            <td>
+                <input type="text" name="cities" id="cities" placeholder="Назва міста"/>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="countTravel">Оцінка подорожі:</label></td>
+            <td><label for="countCity">Оцінка міста:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="range" min="0" max="10" step="1" id="countTravel" placeholder="Оцінка">
+            </td>
+            <td>
+                <input type="number" min="0" max="10" step="1" id="countCity" placeholder="Оцінка">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="response">Текст відгуку:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <textarea name="response" id="response" rows="10" cols="30" spellcheck="false" placeholder="Введіть відгук"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="users">Загальна оцінка користувачів:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <progress value="75" max="100" id="users"></progress>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<fieldset>
+    <legend>Оцінка готелю</legend>
+    <table>
+        <tr>
+            <td><label for="hotel">Назва готелю:</label></td>
+            <td><label for="settlement">Дата поселення:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="hotel" id="hotel" placeholder="Назва готелю англійською" required/>
+            </td>
+            <td>
+                <input type="date" name="settlement" id="settlement" placeholder="дд-мм-рррр" required>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="colorBed">Колір ліжка:</label></td>
+            <td><label for="menu">Найсмачніший пункт меню:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="color" name="colorBed" id="colorBed" placeholder="Колір ліжка">
+            </td>
+            <td>
+                <select name="menu" id="menu">
+                    <optgroup label="Напій">
+                        <option value="1">Чай</option>
+                        <option value="2">Кава</option>
+                        <option value="3">Лимонад</option>
+                    </optgroup>
+                    <optgroup label="Страва">
+                        <option value="1">Вареники</option>
+                        <option value="2">Борщ</option>
+                        <option value="3">Голубці</option>
+                        <option value="4">Салат</option>
+                        <option value="5">Картопля</option>
+                    </optgroup>
+                    <optgroup label="Десерт">
+                        <option value="1">Кекс</option>
+                        <option value="2">Наполеон</option>
+                        <option value="3">Штрудель</option>
+                    </optgroup>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="img">Фото-відгуки:</label></td>
+            <td><label for="users2">Загальна оцінка користувачів:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="file" multiple="multiple" name="photos[]" id="img" accept="image/jpeg, image/png, image/gif" placeholder="Завантажте файл"/>
+            </td>
+            <td>
+                <meter value="83" min="0" max="100" id="users2"></meter>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+    <input type="reset" value="Очистити" />
+    <input type="submit" value="Відправити" />
+    </fieldset>
+</form>
+</body>
+</html>
